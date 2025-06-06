@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #CD7F32;
+  --secondary-color: #3D7A9F;
+  --dark-color: #1A2A3A;
+  --light-color: #F9F6F3;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-body text-dark bg-light min-h-screen;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold leading-tight;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl w-full;
+  }
+
+  .section {
+    @apply py-16 md:py-24 w-full;
+  }
+
+  .btn {
+    @apply px-6 py-3 font-medium rounded-md transition-all duration-300 inline-block text-center cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-600 text-white hover:bg-secondary-700 shadow-md hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white shadow-md hover:shadow-lg;
+  }
+
+  .nav-link {
+    @apply text-light hover:text-primary-500 transition-colors duration-300 cursor-pointer;
+  }
+
+  .nav-link.active {
+    @apply text-primary-500 font-semibold;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl mb-4 font-bold text-center;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-gray-600 mb-10 max-w-2xl mx-auto text-center;
+  }
+}
+
+@layer utilities {
+  .copper-gradient {
+    @apply bg-gradient-to-r from-primary-700 via-primary-600 to-primary-500 text-white;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Slick carousel custom styles */
+.slick-dots li button:before {
+  @apply text-primary-500;
+}
+
+.slick-dots li.slick-active button:before {
+  @apply text-primary-600;
+}
+
+.testimonial-slider .slick-slide {
+  @apply px-4;
+}
