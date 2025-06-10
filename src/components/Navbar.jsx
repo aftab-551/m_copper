@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-dark shadow-lg py-3' : 'bg-transparent py-5'
+        scrolled ? 'bg-dark shadow-lg py-2' : 'bg-transparent py-3'
       }`}
     >
       <div className="container flex justify-between items-center">
@@ -46,9 +46,24 @@ const Navbar = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-white font-heading font-bold text-2xl"
+          className="flex items-center"
         >
-          <span className="text-primary-600">MARTIKA</span> COPPER
+          <Link
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="cursor-pointer"
+          >
+            <img 
+              src="/final-png-for-martika.png" 
+              alt="Martika Copper Refinery" 
+              className={`transition-all duration-300 ${
+                scrolled ? 'h-12' : 'h-16'
+              }`}
+            />
+          </Link>
         </motion.div>
 
         {/* Desktop Menu */}

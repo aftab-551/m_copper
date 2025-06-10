@@ -10,8 +10,12 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="font-heading font-bold text-2xl mb-4">
-              <span className="text-primary-600">MARTIKA</span> COPPER
+            <div className="mb-4">
+              <img 
+                src="/final-png-for-martika.png" 
+                alt="Martika Copper Refinery" 
+                className="h-16 mb-4"
+              />
             </div>
             <p className="text-gray-400 mb-4">
               Delivering premium copper solutions through innovation, quality, and sustainability since 1985.
