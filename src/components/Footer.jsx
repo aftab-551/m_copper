@@ -18,7 +18,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-400 mb-4">
-              Delivering premium copper solutions through innovation, quality, and sustainability since 1985.
+              Delivering premium copper solutions through innovation, quality, and sustainability.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-primary-500 transition-colors">
@@ -80,32 +80,37 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-gray-400 hover:text-primary-500 transition-colors">
-                  Copper Refining
+                  Scrap Cable Recycling Melbourne
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-primary-500 transition-colors">
-                  Recycling Solutions
+                  Scrap PVC Recycling Melbourne
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-primary-500 transition-colors">
-                  Metal Analysis
+                  Aluminium Recycling
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-primary-500 transition-colors">
-                  Global Distribution
+                  Brass Scrap Pick Up
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-primary-500 transition-colors">
-                  Custom Fabrication
+                  Scrap Metal Pick Up
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-primary-500 transition-colors">
-                  Sustainable Practices
+                  Lead Scrap Recycling
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-primary-500 transition-colors">
+                  Stainless Steel Recycling
                 </a>
               </li>
             </ul>
@@ -137,8 +142,9 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-          <p>&copy; {year} Martika Copper Refinery. All rights reserved.</p>
+        <div className="pt-8 border-t border-gray-800 text-center text-gray-500 text-sm flex justify-center space-x-4">
+          <p>© {new Date().getFullYear()} Martika Copper Refinery. All rights reserved.</p>
+          <p>Designed & Developed By <a href="https://www.eparameter.com" className="text-gray-400 hover:text-gray-300">eParameter</a></p>
         </div>
       </div>
     </footer>

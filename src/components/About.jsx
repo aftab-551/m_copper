@@ -26,7 +26,7 @@ const About = () => {
         >
           <h2 className="section-title">About Martika Copper</h2>
           <p className="section-subtitle">
-            Excellence in copper refining since 1985, delivering quality and innovation
+            Excellence in copper refining, delivering quality and innovation
           </p>
         </motion.div>
 
@@ -51,14 +51,15 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold text-primary-700 mb-4">Our Heritage of Excellence</h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              Founded in 1985, Martika Copper Refinery has grown to become a leader in the copper industry. 
-              We combine traditional craftsmanship with cutting-edge technology to deliver copper products of 
-              unparalleled quality and purity.
+              Martika Copper Refinery is a trusted name in copper scrap removal and recycling, 
+              proudly serving Melbourne, Victoria. We offer competitive rates for copper, brass, aluminium, and other scrap metals,
+               with convenient same-day pickup options.
+
+
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              Our state-of-the-art facilities and expert metallurgists ensure we meet the highest 
-              international standards while maintaining our commitment to sustainable and responsible 
-              manufacturing practices.
+              Whether it’s scrap metal or an old car taking up space, we’ll come to you, remove it, and pay you top market value. 
+              At Martika, we make metal recycling easy, efficient, and rewarding.
             </p>
 
             <div className="grid grid-cols-2 gap-4 mt-8">
@@ -67,7 +68,7 @@ const About = () => {
                 <p className="text-gray-600">Copper Purity</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md text-center">
-                <h4 className="text-primary-600 font-bold text-xl mb-2">40+</h4>
+                <h4 className="text-primary-600 font-bold text-xl mb-2">15+</h4>
                 <p className="text-gray-600">Years Experience</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md text-center">

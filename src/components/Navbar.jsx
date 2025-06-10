@@ -89,7 +89,7 @@ const Navbar = () => {
             className="flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md transition-colors duration-300 font-medium"
           >
             <FaPhone className="text-sm" />
-            <span>+61 3 9876 5432</span>
+            <span>+61 4 0776 9293</span>
           </a>
         </div>
 
@@ -131,12 +131,12 @@ const Navbar = () => {
             
             {/* Mobile Phone Button */}
             <a
-              href="tel:+61398765432"
+              href="tel:+61407769293"
               className="flex items-center justify-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-3 rounded-md transition-colors duration-300 font-medium mt-4"
               onClick={toggleMenu}
             >
               <FaPhone className="text-sm" />
-              <span>Call Now: +61 3 9876 5432</span>
+              <span>Call Now: +61 4 0776 9293</span>
             </a>
           </div>
         </motion.div>

@@ -14,7 +14,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      quote: "Martika Copper Refinery has consistently provided us with the highest quality copper materials for our electrical infrastructure projects. Their commitment to excellence is unmatched in the industry.",
+      quote: "Best prices for copper and nonferrous metals, with friendly staff. The top yard in the area—10/10!",
       name: "Sarah Johnson",
       position: "Chief Engineer, PowerGrid Solutions",
       company: "PowerGrid Solutions",
@@ -108,9 +108,9 @@ const Testimonials = () => {
                     </div>
                     <div className="ml-4">
                       <p className="font-bold text-white">{testimonial.name}</p>
-                      <p className="text-primary-400">
+                      {/* <p className="text-primary-400">
                         {testimonial.position}, {testimonial.company}
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                 </div>

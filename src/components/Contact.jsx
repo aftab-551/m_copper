@@ -57,12 +57,12 @@ const Contact = () => {
     {
       icon: <FaPhone className="text-primary-600 text-2xl" />,
       title: "Phone Number",
-      details: ["+61 3 9876 5432", "+61 3 9876 5433"],
+      details: ["+61 4 0776 9293"],
     },
     {
       icon: <FaEnvelope className="text-primary-600 text-2xl" />,
       title: "Email Address",
-      details: ["info@martikacopper.com", "sales@martikacopper.com"],
+      details: ["wajid@martika.com.au"],
     },
     {
       icon: <FaClock className="text-primary-600 text-2xl" />,
@@ -97,7 +97,7 @@ const Contact = () => {
               className="inline-flex items-center space-x-3 bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg transition-colors duration-300 font-semibold text-lg shadow-lg hover:shadow-xl"
             >
               <FaPhone className="text-xl" />
-              <span>Call Now: +61 3 9876 5432</span>
+              <span>Call Now: +61 4 0776 9293</span>
             </a>
           </motion.div>
         </motion.div>
