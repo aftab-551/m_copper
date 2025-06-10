@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaPhone } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +52,7 @@ const Navbar = () => {
         </motion.div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <Link
               key={link.id}
@@ -67,6 +67,15 @@ const Navbar = () => {
               {link.title}
             </Link>
           ))}
+          
+          {/* Phone Button */}
+          <a
+            href="tel:+61398765432"
+            className="flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md transition-colors duration-300 font-medium"
+          >
+            <FaPhone className="text-sm" />
+            <span>+61 3 9876 5432</span>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -104,6 +113,16 @@ const Navbar = () => {
                 {link.title}
               </Link>
             ))}
+            
+            {/* Mobile Phone Button */}
+            <a
+              href="tel:+61398765432"
+              className="flex items-center justify-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-3 rounded-md transition-colors duration-300 font-medium mt-4"
+              onClick={toggleMenu}
+            >
+              <FaPhone className="text-sm" />
+              <span>Call Now: +61 3 9876 5432</span>
+            </a>
           </div>
         </motion.div>
       )}

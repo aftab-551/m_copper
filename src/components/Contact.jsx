@@ -84,6 +84,22 @@ const Contact = () => {
           <p className="section-subtitle">
             Have questions or need a quote? Reach out to our team
           </p>
+          
+          {/* Call Now Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-8"
+          >
+            <a
+              href="tel:+61398765432"
+              className="inline-flex items-center space-x-3 bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg transition-colors duration-300 font-semibold text-lg shadow-lg hover:shadow-xl"
+            >
+              <FaPhone className="text-xl" />
+              <span>Call Now: +61 3 9876 5432</span>
+            </a>
+          </motion.div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -180,7 +196,19 @@ const Contact = () => {
                   </div>
                   <div>
                     {item.details.map((detail, i) => (
-                      <p key={i} className="text-gray-600 mb-1">{detail}</p>
+                      <p key={i} className="text-gray-600 mb-1">
+                        {item.title === "Phone Number" ? (
+                          <a href={`tel:${detail.replace(/\s/g, '')}`} className="hover:text-primary-600 transition-colors">
+                            {detail}
+                          </a>
+                        ) : item.title === "Email Address" ? (
+                          <a href={`mailto:${detail}`} className="hover:text-primary-600 transition-colors">
+                            {detail}
+                          </a>
+                        ) : (
+                          detail
+                        )}
+                      </p>
                     ))}
                   </div>
                 </div>
