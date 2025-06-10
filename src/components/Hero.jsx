@@ -17,20 +17,6 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl"
         >
-          {/* Logo in Hero */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-8"
-          >
-            <img 
-              src="/final-png-for-martika.png" 
-              alt="Martika Copper Refinery" 
-              className="h-24 md:h-32 lg:h-40"
-            />
-          </motion.div>
-          
           <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6">
             Premium Copper Solutions for Modern Industry
           </h1>

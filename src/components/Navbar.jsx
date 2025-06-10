@@ -60,7 +60,7 @@ const Navbar = () => {
               src="/final-png-for-martika.png" 
               alt="Martika Copper Refinery" 
               className={`transition-all duration-300 ${
-                scrolled ? 'h-12' : 'h-16'
+                scrolled ? 'h-16' : 'h-20'
               }`}
             />
           </Link>

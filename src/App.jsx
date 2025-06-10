@@ -20,15 +20,8 @@ function App() {
   if (isLoading) {
     return (
       <div className="h-screen flex items-center justify-center bg-dark">
-        <div className="animate-pulse flex flex-col items-center">
-          <img 
-            src="/final-png-for-martika.png" 
-            alt="Martika Copper Refinery" 
-            className="h-20 mb-4"
-          />
-          <div className="text-2xl text-primary-600 font-heading font-bold">
-            Loading...
-          </div>
+        <div className="animate-pulse text-4xl text-primary-600 font-heading font-bold">
+          MARTIKA COPPER
         </div>
       </div>
     );
