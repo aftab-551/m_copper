@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="relative h-screen flex items-center bg-hero-pattern bg-cover bg-center"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-dark/90 to-dark/70"></div>
-      
+
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -18,26 +18,16 @@ const Hero = () => {
           className="max-w-3xl"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6">
-            Premium Copper Solutions for Modern Industry
+            Get Instant Cash for Your Metal
           </h1>
-          
+
           <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
-            Martika Copper Refinery delivers industry-leading copper refining services 
-            with a commitment to quality, sustainability, and innovation.
+            For any type of metal, steel, aluminium, or copper. Get instant cash
+            from your desired location. We guarantee the best rates in the
+            market. For Melbourne and its surrounding suburbs.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link
-              to="services"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="btn btn-primary text-center"
-            >
-              Our Services
-            </Link>
-            
             <Link
               to="contact"
               spy={true}
@@ -51,7 +41,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-      
+
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -65,18 +55,18 @@ const Hero = () => {
             duration={500}
             className="text-white cursor-pointer"
           >
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="h-8 w-8" 
-              fill="none" 
-              viewBox="0 0 24 24" 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M19 14l-7 7m0 0l-7-7m7 7V3" 
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
               />
             </svg>
           </Link>

@@ -7,15 +7,17 @@ import Stats from '../components/Stats';
 import Projects from '../components/Projects';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
+import ImageSlider from '../components/ImageSlider';
 
 const HomePage = () => {
   return (
     <>
       <Hero />
       <About />
+      <ImageSlider />
       <Services />
       <Process />
-      <Stats />
+      {/* <Stats /> */}
       <Projects />
       <Testimonials />
       <Contact />

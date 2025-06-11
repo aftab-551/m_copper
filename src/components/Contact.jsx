@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -28,46 +29,50 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
+
+    emailjs
+      .sendForm(
+        'service_ztah7sd',
+        'template_ur56yuj',
+        e.target,
+        '4v1wgbxg2usLYhZQv'
+      )
+      .then(
+        (result) => {
+          setSubmitSuccess(true);
+          setFormState({
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
+          });
+        },
+        (error) => {
+          setSubmitSuccess(false);
+        }
+      )
+      .finally(() => {
+        setIsSubmitting(false);
       });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
-    }, 1500);
   };
 
   const contactInfo = [
     {
-      icon: <FaMapMarkerAlt className="text-primary-600 text-2xl" />,
-      title: "Our Location",
-      details: ["123 Industrial Way", "Melbourne, VIC 3000", "Australia"],
-    },
-    {
       icon: <FaPhone className="text-primary-600 text-2xl" />,
-      title: "Phone Number",
-      details: ["+61 4 0776 9293"],
+      title: 'Phone Number',
+      details: ['+61 4 0776 9293'],
     },
     {
       icon: <FaEnvelope className="text-primary-600 text-2xl" />,
-      title: "Email Address",
-      details: ["wajid@martika.com.au"],
+      title: 'Email Address',
+      details: ['wajid@martika.com.au'],
     },
     {
       icon: <FaClock className="text-primary-600 text-2xl" />,
-      title: "Working Hours",
-      details: ["Monday - Friday: 8am - 6pm", "Saturday: 9am - 1pm", "Sunday: Closed"],
+      title: 'Working Hours',
+      details: ['24/7', 'Monday - Sunday: 12pm - 12am'],
     },
   ];
 
@@ -84,7 +89,7 @@ const Contact = () => {
           <p className="section-subtitle">
             Have questions or need a quote? Reach out to our team
           </p>
-          
+
           {/* Call Now Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -110,16 +115,18 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
-            
+
             {submitSuccess && (
               <div className="mb-6 p-4 bg-green-100 text-green-700 rounded-lg">
                 Thank you for your message! We'll get back to you shortly.
               </div>
             )}
-            
+
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label htmlFor="name" className="block text-gray-700 mb-2">Your Name</label>
+                <label htmlFor="name" className="block text-gray-700 mb-2">
+                  Your Name
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -130,9 +137,11 @@ const Contact = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                 />
               </div>
-              
+
               <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700 mb-2">Your Email</label>
+                <label htmlFor="email" className="block text-gray-700 mb-2">
+                  Your Email
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -143,9 +152,11 @@ const Contact = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                 />
               </div>
-              
+
               <div className="mb-4">
-                <label htmlFor="subject" className="block text-gray-700 mb-2">Subject</label>
+                <label htmlFor="subject" className="block text-gray-700 mb-2">
+                  Subject
+                </label>
                 <input
                   type="text"
                   id="subject"
@@ -156,9 +167,11 @@ const Contact = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                 />
               </div>
-              
+
               <div className="mb-4">
-                <label htmlFor="message" className="block text-gray-700 mb-2">Your Message</label>
+                <label htmlFor="message" className="block text-gray-700 mb-2">
+                  Your Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -169,11 +182,13 @@ const Contact = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`btn btn-primary w-full ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
+                className={`btn btn-primary w-full ${
+                  isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                }`}
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
@@ -186,7 +201,7 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {contactInfo.map((item, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md">
@@ -197,12 +212,18 @@ const Contact = () => {
                   <div>
                     {item.details.map((detail, i) => (
                       <p key={i} className="text-gray-600 mb-1">
-                        {item.title === "Phone Number" ? (
-                          <a href={`tel:${detail.replace(/\s/g, '')}`} className="hover:text-primary-600 transition-colors">
+                        {item.title === 'Phone Number' ? (
+                          <a
+                            href={`tel:${detail.replace(/\s/g, '')}`}
+                            className="hover:text-primary-600 transition-colors"
+                          >
                             {detail}
                           </a>
-                        ) : item.title === "Email Address" ? (
-                          <a href={`mailto:${detail}`} className="hover:text-primary-600 transition-colors">
+                        ) : item.title === 'Email Address' ? (
+                          <a
+                            href={`mailto:${detail}`}
+                            className="hover:text-primary-600 transition-colors"
+                          >
                             {detail}
                           </a>
                         ) : (
@@ -213,13 +234,6 @@ const Contact = () => {
                   </div>
                 </div>
               ))}
-            </div>
-            
-            <div className="mt-8 bg-white p-1 rounded-lg shadow-md h-64">
-              {/* This would be a map component in a real implementation */}
-              <div className="bg-gray-200 h-full w-full rounded-lg flex items-center justify-center">
-                <p className="text-gray-500">Interactive Map Would Be Here</p>
-              </div>
             </div>
           </motion.div>
         </div>
